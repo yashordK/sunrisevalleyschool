@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Valley School</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4a90e2',secondary:'#6c757d'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Lato', sans-serif;
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=A%20bright%2C%20welcoming%20school%20campus%20with%20modern%20architecture%2C%20lush%20green%20lawns%2C%20and%20colorful%20flowers.%20The%20scene%20is%20bathed%20in%20soft%20morning%20sunlight%20creating%20a%20warm%2C%20inviting%20atmosphere.%20Students%20are%20walking%20together%20in%20the%20background.%20The%20image%20has%20a%20clean%2C%20professional%20aesthetic%20with%20a%20light%20blue%20sky.&width=1200&height=600&seq=school1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #4a90e2;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #4a90e2;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #4a90e2;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #4a90e2;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+top: 2px;
+left: 6px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+<div class="container mx-auto px-6 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center cursor-pointer" onclick="location.reload();">
+<span class="text-white font-['Pacifico'] text-xl">SVS</span>
+</div>
+<a href="#" onclick="location.reload();" class="text-xl font-semibold text-gray-800">Sunrise Valley School</a>
+</div>
+<div class="hidden md:flex space-x-8">
+<a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About Us</a>
+<a href="#academics" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+<a href="#principal" class="nav-link text-gray-700 hover:text-primary transition-colors">Principal's Message</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+</div>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg text-gray-700"></i>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen pt-24 flex items-center">
+<div class="container mx-auto px-6 py-16">
+<div class="w-full md:w-1/2">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Sunrise Valley School</h1>
+<p class="text-xl md:text-2xl text-gray-600 mb-8">Empowering Young Minds for a Brighter Tomorrow</p>
+<p class="text-gray-700 mb-8 max-w-lg">Where education meets innovation. We nurture curiosity, creativity, and character in a supportive and inclusive learning environment.</p>
+<div class="flex space-x-4">
+<a href="#about" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap cursor-pointer">About Us</a>
+<a href="#contact" class="border-2 border-primary text-primary px-6 py-3 !rounded-button hover:bg-blue-50 transition-colors whitespace-nowrap cursor-pointer">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center text-gray-800 mb-16">About Us</h2>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
+<p class="text-gray-700 mb-6">At Sunrise Valley School, we are dedicated to providing a holistic education that fosters academic excellence, personal growth, and social responsibility. We believe in nurturing each student's unique potential and preparing them to be thoughtful, engaged citizens of the world.</p>
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Values</h3>
+<ul class="space-y-3 text-gray-700">
+<li class="flex items-start">
+<div class="w-6 h-6 mt-1 flex items-center justify-center text-primary">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="ml-2"><strong>Excellence:</strong> We strive for excellence in all aspects of education.</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 mt-1 flex items-center justify-center text-primary">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="ml-2"><strong>Integrity:</strong> We foster honesty, respect, and ethical behavior.</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 mt-1 flex items-center justify-center text-primary">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="ml-2"><strong>Innovation:</strong> We embrace creativity and forward-thinking approaches.</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 mt-1 flex items-center justify-center text-primary">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="ml-2"><strong>Inclusivity:</strong> We celebrate diversity and create a welcoming environment for all.</span>
+</li>
+</ul>
+</div>
+<div class="w-full md:w-1/2">
+<div class="rounded-lg overflow-hidden shadow-lg relative">
+<div class="carousel-container w-full h-[400px]">
+<div class="carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500">
+<img src="https://www.jhs.ac.in/photogallery/fundamentals-holi-2025-celebration/fundamentals-holi-2025-celebration-1.jpg" alt="Students in classroom" class="w-full h-full object-cover object-top">
+</div>
+<div class="carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500">
+<img src="https://www.jhs.ac.in/photogallery/career-counseling-session-2025-for-grade-10/career-counseling-session-2025-for-grade-10-1.jpg" alt="Science lab" class="w-full h-full object-cover object-top">
+</div>
+<div class="carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500">
+<img src="https://www.jhs.ac.in/photogallery/g2-on-2025-national-cereals-day/g2-on-2025-national-cereals-day-1.jpg" alt="Cultural performance" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 w-10 h-10 rounded-full flex items-center justify-center text-gray-800" onclick="moveSlide(-1)">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 w-10 h-10 rounded-full flex items-center justify-center text-gray-800" onclick="moveSlide(1)">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+<button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="currentSlide(0)"></button>
+<button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="currentSlide(1)"></button>
+<button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white" onclick="currentSlide(2)"></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Excellence Section -->
+<section id="academics" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Academic Excellence</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-md transition-transform hover:scale-105">
+<div class="w-16 h-16 mx-auto mb-6 rounded-full bg-blue-100 flex items-center justify-center">
+<i class="ri-flask-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center text-gray-800 mb-4">STEM Foundations</h3>
+<p class="text-gray-700 text-center">Our STEM program equips K-12 students with critical thinking and problem-solving skills through hands-on learning in science, technology, engineering, and math.</p>
+<ul class="mt-4 space-y-2 text-gray-700">
+<li class="flex items-start">
+<div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span class="ml-2">Innovative Science Projects</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span class="ml-2">Coding & Robotics</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span class="ml-2">Engineering Challenges</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Principal's Message Section -->
+<section id="principal" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Message from the Principal</h2>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/3">
+<div class="rounded-full overflow-hidden border-4 border-primary mx-auto" style="max-width: 250px;">
+<img src="https://davkota.org/File/6702/NPJ_Ms.%20Palavi%20Mam.JPG" alt="Mrs. Anjali Verma, Principal" class="w-full h-full object-cover object-top">
+</div>
+<h3 class="text-xl font-semibold text-center text-gray-800 mt-6">Mrs. Anjali Verma</h3>
+<p class="text-center text-gray-600">Principal</p>
+</div>
+<div class="w-full md:w-2/3">
+<div class="bg-blue-50 p-8 rounded-lg border-l-4 border-primary">
+<div class="w-10 h-10 flex items-center justify-center text-primary mb-4">
+<i class="ri-double-quotes-l ri-2x"></i>
+</div>
+<p class="text-gray-700 mb-6">Dear Parents and Students,</p>
+<p class="text-gray-700 mb-6">Welcome to Sunrise Valley School, where we believe that education is not just about academic achievement, but about nurturing the whole child. Our mission is to create a learning environment where students develop the knowledge, skills, and character needed to thrive in an ever-changing world.</p>
+<p class="text-gray-700 mb-6">At Sunrise Valley, we are committed to excellence in education, fostering a culture of inquiry, creativity, and respect. Our dedicated faculty and staff work tirelessly to ensure that each student receives personalized attention and support to reach their full potential.</p>
+<p class="text-gray-700 mb-6">We believe in the power of partnership between home and school. Together, we can create a foundation for lifelong learning and success. I invite you to become an active part of our school community and join us in this important journey.</p>
+<p class="text-gray-700 mb-6">I look forward to meeting you and your children, and to sharing in the excitement of learning and growth that defines the Sunrise Valley experience.</p>
+<p class="text-gray-700 mb-2">Warm regards,</p>
+<p class="text-gray-800 font-semibold">Anjali Verma</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Contact Us</h2>
+<div class="flex justify-center">
+<div class="w-full max-w-xl">
+<div class="bg-white p-8 rounded-lg shadow-md">
+<h3 class="text-2xl font-semibold text-gray-800 mb-6">School Information</h3>
+<div class="mb-8">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">Address</h4>
+<p class="text-gray-700 flex items-start">
+<div class="w-6 h-6 mt-1 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="ml-2">Sunrise Valley School <br>
+    Rajendra Nagar, Ujjain, Madhya Pradesh 456001<br>
+    </span>
+</p>
+</div>
+<div class="mb-8">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">Contact Details</h4>
+<p class="text-gray-700 flex items-center mb-3">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2">+91 98765 43210</span>
+</p>
+<p class="text-gray-700 flex items-center">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2">info@sunrisevalleyschool.org</span>
+</p>
+</div>
+<div class="mb-8">
+<h4 class="text-lg font-semibold text-gray-800 mb-3">Office Hours</h4>
+<p class="text-gray-700 flex items-start">
+<div class="w-6 h-6 mt-1 flex items-center justify-center text-primary">
+<i class="ri-time-line"></i>
+</div>
+<span class="ml-2">Monday - Friday: 8:00 AM - 4:30 PM<br>Saturday: 9:00 AM - 12:00 PM<br>Sunday: Closed</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between mb-12">
+<div class="mb-8 md:mb-0">
+<div class="flex items-center space-x-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<span class="text-primary font-['Pacifico'] text-lg">SVS</span>
+</div>
+<span class="text-xl font-semibold">Sunrise Valley School</span>
+</div>
+<p class="text-gray-400 max-w-xs">Empowering Young Minds for a Brighter Tomorrow since 1995.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#academics" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+<li><a href="#principal" class="text-gray-400 hover:text-white transition-colors">Principal's Message</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+
+<div>
+<h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+<div class="flex space-x-4 mb-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+<p class="text-gray-400">Subscribe to our newsletter</p>
+<div class="flex mt-2">
+<input type="email" placeholder="Your email" class="px-4 py-2 w-full border-none rounded-l text-gray-800 text-sm">
+<button class="bg-primary text-white px-4 py-2 rounded-r !rounded-button whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+<p>© 2025 Sunrise Valley School. All rights reserved.</p>
+<div class="flex justify-center mt-4 space-x-4">
+<a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="hover:text-white transition-colors">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+function showSlide(index) {
+if (index >= slides.length) currentSlideIndex = 0;
+if (index < 0) currentSlideIndex = slides.length - 1;
+slides.forEach(slide => slide.style.opacity = '0');
+slides[currentSlideIndex].style.opacity = '1';
+const dots = document.querySelectorAll('.bottom-4 button');
+dots.forEach((dot, i) => {
+dot.style.backgroundColor = i === currentSlideIndex ? 'rgb(255, 255, 255)' : 'rgba(255, 255, 255, 0.5)';
+});
+}
+window.moveSlide = function(n) {
+showSlide(currentSlideIndex += n);
+}
+window.currentSlide = function(n) {
+showSlide(currentSlideIndex = n);
+}
+showSlide(currentSlideIndex);
+setInterval(() => {
+moveSlide(1);
+}, 5000);
+});
+</script>
+</body>
+</html>
